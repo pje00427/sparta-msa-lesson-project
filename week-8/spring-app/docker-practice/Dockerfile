@@ -23,7 +23,7 @@ FROM amazoncorretto:21-alpine
 
 WORKDIR /app
 
-# jar매치 수정
+# jar 매치 수정 ( plain 으로 충돌 날 수 있으므로 )
 COPY --from=builder /app/build/libs/*-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
