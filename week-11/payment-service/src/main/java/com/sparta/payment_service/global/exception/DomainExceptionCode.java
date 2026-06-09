@@ -1,0 +1,19 @@
+package com.sparta.payment_service.global.exception;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+
+@Getter
+@RequiredArgsConstructor
+public enum DomainExceptionCode {
+
+  // Payment
+  PAYMENT_NOT_FOUND("결제 내역을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
+
+  // Common
+  INVALID_REQUEST("잘못된 요청입니다.", HttpStatus.BAD_REQUEST);
+
+  private final String message;
+  private final HttpStatus httpStatus;
+}

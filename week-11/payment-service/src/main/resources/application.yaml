@@ -53,5 +53,3 @@ management:
       enabled: true
 
 logging:
-  level:
-    org.hibernate.SQL: DEBUG
